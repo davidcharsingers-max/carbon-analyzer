@@ -1,0 +1,25 @@
+plugins {
+    id 'com.android.application' version '8.5.2' apply false
+}
+
+# Carbon Analyzer Android
+
+CSV 파일을 선택하면 연비 손실 가능성, 카본 누적 의심도, 공회전 비율, RPM 안정성을 분석하는 안드로이드 MVP입니다.
+
+## GitHub에서 APK 만들기
+1. 이 ZIP 압축을 풉니다.
+2. GitHub 저장소에 모든 파일을 업로드합니다.
+3. Actions 탭에서 빌드가 끝날 때까지 기다립니다.
+4. Artifacts에서 carbon-analyzer-debug-apk를 다운로드합니다.
+5. 압축을 풀면 app-debug.apk가 있습니다.
+
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement { repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS); repositories{ google(); mavenCentral() } }
+rootProject.name='CarbonAnalyzer'
+include ':app'
